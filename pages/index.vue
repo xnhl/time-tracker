@@ -33,87 +33,87 @@ export default {
 		}
 	},
 	beforeMount() {
-		let now = moment();
-		let dayStart = moment().startOf('day');
-		let numSeconds = now.diff(dayStart, 'seconds');
-		this.secondsElapsed = numSeconds;
+		let now = moment()
+		let dayStart = moment().startOf('day')
+		let numSeconds = now.diff(dayStart, 'seconds')
+		this.secondsElapsed = numSeconds
 
-		let dayStartUnix = moment().startOf("day").unix();
-		let dayEndUnix = moment().endOf("day").unix();
-		let dayNowUnix = moment().unix();
-		let dayLength = dayEndUnix - dayStartUnix;
-		let dayPct = ((dayNowUnix - dayStartUnix)/dayLength) * 100;
-		this.day = dayPct;
+		let dayStartUnix = moment().startOf("day").unix()
+		let dayEndUnix = moment().endOf("day").unix()
+		let dayNowUnix = moment().unix()
+		let dayLength = dayEndUnix - dayStartUnix
+		let dayPct = ((dayNowUnix - dayStartUnix)/dayLength) * 100
+		this.day = dayPct
 
-		let hourStartUnix = moment().startOf("hour").unix();
-		let hourEndUnix = moment().endOf("hour").unix();
-		let hourNowUnix = moment().unix();
-		let hourLength = hourEndUnix - hourStartUnix;
-		let hourPct = ((hourNowUnix - hourStartUnix)/hourLength) * 100;
-		this.hour = hourPct;
+		let hourStartUnix = moment().startOf("hour").unix()
+		let hourEndUnix = moment().endOf("hour").unix()
+		let hourNowUnix = moment().unix()
+		let hourLength = hourEndUnix - hourStartUnix
+		let hourPct = ((hourNowUnix - hourStartUnix)/hourLength) * 100
+		this.hour = hourPct
 		
-		let weekStartUnix = moment().startOf("week").unix();
-		let weekEndUnix = moment().endOf("week").unix();
-		let weekNowUnix = moment().unix();
-		let weekLength = weekEndUnix - weekStartUnix;
-		let weekPct = ((weekNowUnix - weekStartUnix)/weekLength) * 100;
-		this.week = weekPct;
+		let weekStartUnix = moment().startOf("week").unix()
+		let weekEndUnix = moment().endOf("week").unix()
+		let weekNowUnix = moment().unix()
+		let weekLength = weekEndUnix - weekStartUnix
+		let weekPct = ((weekNowUnix - weekStartUnix)/weekLength) * 100
+		this.week = weekPct
 		
-		let monthStartUnix = moment().startOf("month").unix();
-		let monthEndUnix = moment().endOf("month").unix();
-		let monthNowUnix = moment().unix();
-		let monthLength = monthEndUnix - monthStartUnix;
-		let monthPct = ((monthNowUnix - monthStartUnix)/monthLength) * 100;
-		this.month = monthPct;
+		let monthStartUnix = moment().startOf("month").unix()
+		let monthEndUnix = moment().endOf("month").unix()
+		let monthNowUnix = moment().unix()
+		let monthLength = monthEndUnix - monthStartUnix
+		let monthPct = ((monthNowUnix - monthStartUnix)/monthLength) * 100
+		this.month = monthPct
 		
-		let yearStartUnix = moment().startOf("year").unix();
-		let yearEndUnix = moment().endOf("year").unix();
-		let yearNowUnix = moment().unix();
-		let yearLength = yearEndUnix - yearStartUnix;
-		let yearPct = ((yearNowUnix - yearStartUnix)/yearLength) * 100;
-		this.year = yearPct;
+		let yearStartUnix = moment().startOf("year").unix()
+		let yearEndUnix = moment().endOf("year").unix()
+		let yearNowUnix = moment().unix()
+		let yearLength = yearEndUnix - yearStartUnix
+		let yearPct = ((yearNowUnix - yearStartUnix)/yearLength) * 100
+		this.year = yearPct
 	},
 	mounted() {
 		setInterval(() => {
-			let dayStartUnix = moment().startOf("day").unix();
-			let dayEndUnix = moment().endOf("day").unix();
-			let dayNowUnix = moment().unix();
-			let dayLength = dayEndUnix - dayStartUnix;
-			let dayPct = ((dayNowUnix - dayStartUnix)/dayLength) * 100;
-			this.day = dayPct;
+			let dayStartUnix = moment().startOf("day").unix()
+			let dayEndUnix = moment().endOf("day").unix()
+			let dayNowUnix = moment().unix()
+			let dayLength = dayEndUnix - dayStartUnix
+			let dayPct = ((dayNowUnix - dayStartUnix)/dayLength) * 100
+			this.day = dayPct
 
-			let hourStartUnix = moment().startOf("hour").unix();
-			let hourEndUnix = moment().endOf("hour").unix();
-			let hourNowUnix = moment().unix();
-			let hourLength = hourEndUnix - hourStartUnix;
-			let hourPct = ((hourNowUnix - hourStartUnix)/hourLength) * 100;
-			this.hour = hourPct;
+			let hourStartUnix = moment().startOf("hour").unix()
+			let hourEndUnix = moment().endOf("hour").unix()
+			let hourNowUnix = moment().unix()
+			let hourLength = hourEndUnix - hourStartUnix
+			let hourPct = ((hourNowUnix - hourStartUnix)/hourLength) * 100
+			this.hour = hourPct
 			 
-			let weekStartUnix = moment().startOf("week").unix();
-			let weekEndUnix = moment().endOf("week").unix();
-			let weekNowUnix = moment().unix();
-			let weekLength = weekEndUnix - weekStartUnix;
-			let weekPct = ((weekNowUnix - weekStartUnix)/weekLength) * 100;
-			this.week = weekPct;
+			let weekStartUnix = moment().startOf("week").unix()
+			let weekEndUnix = moment().endOf("week").unix()
+			let weekNowUnix = moment().unix()
+			let weekLength = weekEndUnix - weekStartUnix
+			let weekPct = ((weekNowUnix - weekStartUnix)/weekLength) * 100
+			this.week = weekPct
 			
-			let monthStartUnix = moment().startOf("month").unix();
-			let monthEndUnix = moment().endOf("month").unix();
-			let monthNowUnix = moment().unix();
-			let monthLength = monthEndUnix - monthStartUnix;
-			let monthPct = ((monthNowUnix - monthStartUnix)/monthLength) * 100;
-			this.month = monthPct;
+			let monthStartUnix = moment().startOf("month").unix()
+			let monthEndUnix = moment().endOf("month").unix()
+			let monthNowUnix = moment().unix()
+			let monthLength = monthEndUnix - monthStartUnix
+			let monthPct = ((monthNowUnix - monthStartUnix)/monthLength) * 100
+			this.month = monthPct
 			
-			let yearStartUnix = moment().startOf("year").unix();
-			let yearEndUnix = moment().endOf("year").unix();
-			let yearNowUnix = moment().unix();
-			let yearLength = yearEndUnix - yearStartUnix;
-			let yearPct = ((yearNowUnix - yearStartUnix)/yearLength) * 100;
-			this.year = yearPct;
+			let yearStartUnix = moment().startOf("year").unix()
+			let yearEndUnix = moment().endOf("year").unix()
+			let yearNowUnix = moment().unix()
+			let yearLength = yearEndUnix - yearStartUnix
+			let yearPct = ((yearNowUnix - yearStartUnix)/yearLength) * 100
+			this.year = yearPct
 
-			this.time = `${moment().format("LL")} ${moment().format("LTS")}`;
-			this.minute = parseInt(moment().seconds()) * 1.666666666666667;
+			this.time = `${moment().format("LL")} ${moment().format("LTS")}`
+			this.minute = parseInt(moment().seconds()) * 1.666666666666667
 			this.secondsElapsed++
-		}, 1000);
+		}, 1000)
 	}
 }
 </script>

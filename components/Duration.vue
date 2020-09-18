@@ -32,8 +32,8 @@ export default {
 	},
 	computed: {
 		getTitle: function() {
-			let stepone = this.duration.split("")[0].toUpperCase();
-			let steptwo = `${stepone}${this.duration.substring(1)}`;
+			let stepone = this.duration.split("")[0].toUpperCase()
+			let steptwo = `${stepone}${this.duration.substring(1)}`
 			return steptwo
 		}
 	}
